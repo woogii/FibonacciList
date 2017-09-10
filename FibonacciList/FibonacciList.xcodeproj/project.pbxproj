@@ -65,6 +65,7 @@
 		B8166CF51F658228009BA0D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B817FE391F65599100C5F0F9 /* Main.storyboard */,
 				B8166CF31F6581B6009BA0D8 /* Assets.xcassets */,
 				B817FE3E1F65599100C5F0F9 /* LaunchScreen.storyboard */,
 				B817FE411F65599100C5F0F9 /* Info.plist */,
@@ -98,7 +99,6 @@
 				B817FE5A1F655B8300C5F0F9 /* Controller */,
 				B817FE5D1F655BD400C5F0F9 /* App */,
 				B817FE5E1F655C3000C5F0F9 /* Constant */,
-				B817FE641F655DEE00C5F0F9 /* Storyboard */,
 				B8166CF51F658228009BA0D8 /* Supporting Files */,
 			);
 			path = FibonacciList;
@@ -151,14 +151,6 @@
 				B817FE5F1F655C3E00C5F0F9 /* Constants.swift */,
 			);
 			path = Constant;
-			sourceTree = "<group>";
-		};
-		B817FE641F655DEE00C5F0F9 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				B817FE391F65599100C5F0F9 /* Main.storyboard */,
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +291,6 @@
 				B817FE3A1F65599100C5F0F9 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		B817FE3E1F65599100C5F0F9 /* LaunchScreen.storyboard */ = {
