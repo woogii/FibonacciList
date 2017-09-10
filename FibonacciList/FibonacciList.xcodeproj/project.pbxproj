@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B8166CEE1F655F5D009BA0D8 /* FibonacciList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8166CED1F655F5D009BA0D8 /* FibonacciList.swift */; };
+		B8166CF41F6581B6009BA0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8166CF31F6581B6009BA0D8 /* Assets.xcassets */; };
 		B817FE361F65599100C5F0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817FE351F65599100C5F0F9 /* AppDelegate.swift */; };
 		B817FE3B1F65599100C5F0F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B817FE391F65599100C5F0F9 /* Main.storyboard */; };
-		B817FE3D1F65599100C5F0F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B817FE3C1F65599100C5F0F9 /* Assets.xcassets */; };
 		B817FE401F65599100C5F0F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B817FE3E1F65599100C5F0F9 /* LaunchScreen.storyboard */; };
 		B817FE4B1F65599100C5F0F9 /* FibonacciListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817FE4A1F65599100C5F0F9 /* FibonacciListTests.swift */; };
 		B817FE5C1F655BA200C5F0F9 /* FibonacciTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817FE5B1F655BA200C5F0F9 /* FibonacciTableViewController.swift */; };
@@ -30,12 +30,12 @@
 
 /* Begin PBXFileReference section */
 		B8166CED1F655F5D009BA0D8 /* FibonacciList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciList.swift; sourceTree = "<group>"; };
+		B8166CF31F6581B6009BA0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B817FE321F65599100C5F0F9 /* FibonacciList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FibonacciList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B817FE351F65599100C5F0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = /Users/siwook/Documents/FibonacciList/FibonacciList/FibonacciList/App/AppDelegate.swift; sourceTree = "<absolute>"; };
 		B817FE3A1F65599100C5F0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B817FE3C1F65599100C5F0F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = /Users/siwook/Documents/FibonacciList/FibonacciList/FibonacciList/Assets.xcassets; sourceTree = "<absolute>"; };
 		B817FE3F1F65599100C5F0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B817FE411F65599100C5F0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		B817FE411F65599100C5F0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B817FE461F65599100C5F0F9 /* FibonacciListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FibonacciListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B817FE4A1F65599100C5F0F9 /* FibonacciListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciListTests.swift; sourceTree = "<group>"; };
 		B817FE4C1F65599100C5F0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +62,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8166CF51F658228009BA0D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8166CF31F6581B6009BA0D8 /* Assets.xcassets */,
+				B817FE3E1F65599100C5F0F9 /* LaunchScreen.storyboard */,
+				B817FE411F65599100C5F0F9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B817FE291F65599100C5F0F9 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +99,7 @@
 				B817FE5D1F655BD400C5F0F9 /* App */,
 				B817FE5E1F655C3000C5F0F9 /* Constant */,
 				B817FE641F655DEE00C5F0F9 /* Storyboard */,
-				B817FE631F655CF200C5F0F9 /* Supporting Files */,
+				B8166CF51F658228009BA0D8 /* Supporting Files */,
 			);
 			path = FibonacciList;
 			sourceTree = "<group>";
@@ -141,17 +151,6 @@
 				B817FE5F1F655C3E00C5F0F9 /* Constants.swift */,
 			);
 			path = Constant;
-			sourceTree = "<group>";
-		};
-		B817FE631F655CF200C5F0F9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B817FE3C1F65599100C5F0F9 /* Assets.xcassets */,
-				B817FE411F65599100C5F0F9 /* Info.plist */,
-				B817FE3E1F65599100C5F0F9 /* LaunchScreen.storyboard */,
-			);
-			name = "Supporting Files";
-			path = "Supporting Files/Assets.xcassets";
 			sourceTree = "<group>";
 		};
 		B817FE641F655DEE00C5F0F9 /* Storyboard */ = {
@@ -248,7 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B817FE401F65599100C5F0F9 /* LaunchScreen.storyboard in Resources */,
-				B817FE3D1F65599100C5F0F9 /* Assets.xcassets in Resources */,
+				B8166CF41F6581B6009BA0D8 /* Assets.xcassets in Resources */,
 				B817FE3B1F65599100C5F0F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +308,6 @@
 				B817FE3F1F65599100C5F0F9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
