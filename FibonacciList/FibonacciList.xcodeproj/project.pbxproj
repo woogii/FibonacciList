@@ -83,13 +83,13 @@
 		B817FE341F65599100C5F0F9 /* FibonacciList */ = {
 			isa = PBXGroup;
 			children = (
+				B817FE551F6559C600C5F0F9 /* Model */,
+				B817FE571F6559EE00C5F0F9 /* View */,
+				B817FE5A1F655B8300C5F0F9 /* Controller */,
+				B817FE5D1F655BD400C5F0F9 /* App */,
+				B817FE5E1F655C3000C5F0F9 /* Constant */,
 				B817FE641F655DEE00C5F0F9 /* Storyboard */,
 				B817FE631F655CF200C5F0F9 /* Supporting Files */,
-				B817FE5E1F655C3000C5F0F9 /* Constant */,
-				B817FE5D1F655BD400C5F0F9 /* App */,
-				B817FE5A1F655B8300C5F0F9 /* Controller */,
-				B817FE571F6559EE00C5F0F9 /* View */,
-				B817FE551F6559C600C5F0F9 /* Model */,
 			);
 			path = FibonacciList;
 			sourceTree = "<group>";
@@ -414,6 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MFYH4C9VNG;
 				INFOPLIST_FILE = FibonacciList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woogii.FibonacciList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MFYH4C9VNG;
 				INFOPLIST_FILE = FibonacciList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woogii.FibonacciList;
 				PRODUCT_NAME = "$(TARGET_NAME)";

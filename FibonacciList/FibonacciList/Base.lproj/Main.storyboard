@@ -13,7 +13,7 @@
         <scene sceneID="VRm-gT-Flc">
             <objects>
                 <tableViewController storyboardIdentifier="FibonacciTableVC" id="OtH-q4-Mba" customClass="FibonacciTableViewController" customModule="FibonacciList" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q7V-6I-k16">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q7V-6I-k16">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -22,9 +22,24 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VHP-re-96r" id="OoQ-sI-YWw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH3-tD-cIp">
+                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dH3-tD-cIp" firstAttribute="leading" secondItem="OoQ-sI-YWw" secondAttribute="leading" constant="20" id="kKa-OX-YFx"/>
+                                        <constraint firstItem="dH3-tD-cIp" firstAttribute="centerY" secondItem="OoQ-sI-YWw" secondAttribute="centerY" id="kMF-xF-zrY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fibonacciNumberLabel" destination="dH3-tD-cIp" id="9QA-dD-Fg6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
