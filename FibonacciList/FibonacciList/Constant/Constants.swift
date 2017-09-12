@@ -11,13 +11,13 @@ import Foundation
 // MARK : - Constant 
 
 struct Constant {
-  
+
   static let FibonacciInfoPrefix = "fib"
-  
+
   // MARK : - Cell IDs 
-  
+
   struct CellIDs {
-    static let FibonacciCell = "fibonacciTableViewCell"
+    static let FibonacciCell = "cell"
   }
-  
+
 }

@@ -15,7 +15,6 @@
 		B817FE4B1F65599100C5F0F9 /* FibonacciListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817FE4A1F65599100C5F0F9 /* FibonacciListTests.swift */; };
 		B817FE5C1F655BA200C5F0F9 /* FibonacciTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817FE5B1F655BA200C5F0F9 /* FibonacciTableViewController.swift */; };
 		B817FE601F655C3E00C5F0F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817FE5F1F655C3E00C5F0F9 /* Constants.swift */; };
-		B817FE621F655C8D00C5F0F9 /* FibonacciTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817FE611F655C8D00C5F0F9 /* FibonacciTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		B817FE4C1F65599100C5F0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B817FE5B1F655BA200C5F0F9 /* FibonacciTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciTableViewController.swift; sourceTree = "<group>"; };
 		B817FE5F1F655C3E00C5F0F9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B817FE611F655C8D00C5F0F9 /* FibonacciTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				B817FE551F6559C600C5F0F9 /* Model */,
-				B817FE571F6559EE00C5F0F9 /* View */,
 				B817FE5A1F655B8300C5F0F9 /* Controller */,
 				B817FE5D1F655BD400C5F0F9 /* App */,
 				B817FE5E1F655C3000C5F0F9 /* Constant */,
@@ -119,14 +116,6 @@
 				B8166CED1F655F5D009BA0D8 /* FibonacciList.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		B817FE571F6559EE00C5F0F9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B817FE611F655C8D00C5F0F9 /* FibonacciTableViewCell.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		B817FE5A1F655B8300C5F0F9 /* Controller */ = {
@@ -163,6 +152,7 @@
 				B817FE2E1F65599100C5F0F9 /* Sources */,
 				B817FE2F1F65599100C5F0F9 /* Frameworks */,
 				B817FE301F65599100C5F0F9 /* Resources */,
+				B837FE351F67F12800453F98 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -253,12 +243,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B837FE351F67F12800453F98 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B817FE2E1F65599100C5F0F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B817FE621F655C8D00C5F0F9 /* FibonacciTableViewCell.swift in Sources */,
 				B817FE5C1F655BA200C5F0F9 /* FibonacciTableViewController.swift in Sources */,
 				B817FE361F65599100C5F0F9 /* AppDelegate.swift in Sources */,
 				B817FE601F655C3E00C5F0F9 /* Constants.swift in Sources */,
