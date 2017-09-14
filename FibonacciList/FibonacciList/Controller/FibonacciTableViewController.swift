@@ -14,8 +14,6 @@ class FibonacciTableViewController: UITableViewController {
 
   // MARK : - Property 
 
-  private var sequence = 0
-  private var fibonacciNumber: NSNumber = 0
   private let indicator: UIActivityIndicatorView = {
     let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     return indicator
@@ -59,6 +57,7 @@ class FibonacciTableViewController: UITableViewController {
     fibonacciList.getFibonacciNumbers {  [weak self] in
       self?.updateUI()
     }
+    
   }
 
   // MARK : - Update UI
@@ -90,9 +89,11 @@ extension FibonacciTableViewController {
   // MARK : - Configure FibonacciTableViewCell
 
   private func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
+    
     guard let fibonacciNumber = fibonacciList.numbersDict[indexPath.row] else {
       return
     }
+    
     cell.textLabel?.text = Constant.FibonacciInfoPrefix + " \(indexPath.row) : \(fibonacciNumber.intValue)"
   }
 

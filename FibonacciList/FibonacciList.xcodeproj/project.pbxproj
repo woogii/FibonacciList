@@ -31,7 +31,7 @@
 		B8166CED1F655F5D009BA0D8 /* FibonacciList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciList.swift; sourceTree = "<group>"; };
 		B8166CF31F6581B6009BA0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B817FE321F65599100C5F0F9 /* FibonacciList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FibonacciList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B817FE351F65599100C5F0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = /Users/siwook/Documents/FibonacciList/FibonacciList/FibonacciList/App/AppDelegate.swift; sourceTree = "<absolute>"; };
+		B817FE351F65599100C5F0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B817FE3A1F65599100C5F0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B817FE3F1F65599100C5F0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B817FE411F65599100C5F0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,12 +63,13 @@
 		B8166CF51F658228009BA0D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B817FE391F65599100C5F0F9 /* Main.storyboard */,
 				B8166CF31F6581B6009BA0D8 /* Assets.xcassets */,
-				B817FE3E1F65599100C5F0F9 /* LaunchScreen.storyboard */,
 				B817FE411F65599100C5F0F9 /* Info.plist */,
+				B817FE3E1F65599100C5F0F9 /* LaunchScreen.storyboard */,
+				B817FE391F65599100C5F0F9 /* Main.storyboard */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		B817FE291F65599100C5F0F9 = {
@@ -92,10 +93,10 @@
 		B817FE341F65599100C5F0F9 /* FibonacciList */ = {
 			isa = PBXGroup;
 			children = (
-				B817FE551F6559C600C5F0F9 /* Model */,
-				B817FE5A1F655B8300C5F0F9 /* Controller */,
 				B817FE5D1F655BD400C5F0F9 /* App */,
 				B817FE5E1F655C3000C5F0F9 /* Constant */,
+				B817FE5A1F655B8300C5F0F9 /* Controller */,
+				B817FE551F6559C600C5F0F9 /* Model */,
 				B8166CF51F658228009BA0D8 /* Supporting Files */,
 			);
 			path = FibonacciList;
@@ -297,6 +298,7 @@
 				B817FE3A1F65599100C5F0F9 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		B817FE3E1F65599100C5F0F9 /* LaunchScreen.storyboard */ = {
@@ -305,6 +307,7 @@
 				B817FE3F1F65599100C5F0F9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -408,7 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MFYH4C9VNG;
-				INFOPLIST_FILE = FibonacciList/Info.plist;
+				INFOPLIST_FILE = "FibonacciList/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woogii.FibonacciList;
@@ -422,7 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MFYH4C9VNG;
-				INFOPLIST_FILE = FibonacciList/Info.plist;
+				INFOPLIST_FILE = "FibonacciList/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woogii.FibonacciList;
