@@ -15,33 +15,6 @@ class FibonacciList {
   // MARK : - Property 
 
   var numbersDict = [Int: NSDecimalNumber]()
-  var sequence = 0
-
-  // MARK : - Get Fibonacci Numbers
-  /// Get Fibonacci numbers that are lower than the upper limit value of Integer type
-  /// - Parameter updateUIOnMain: ()->Void
-
-  func getFibonacciNumbers(_ updateUIOnMain:@escaping () -> Void) {
-
-    let queue = DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
-
-    queue.async {
-
-      // Repeat operations until the fibonacci numbers are lower than the upper limit value of Integer type
-      while true {
-
-        let fibonacciNumber = self.fibonacciWithMemoization(number : self.sequence)
-
-        if fibonacciNumber.int64Value < 0 {
-          DispatchQueue.main.async {
-            updateUIOnMain()
-          }
-          break
-        }
-        self.sequence += 1
-      }
-    }
-  }
 
   // MARK : - Perform Fibonacci Calculations
   /// Calculate fibonacci numbers with Memoization

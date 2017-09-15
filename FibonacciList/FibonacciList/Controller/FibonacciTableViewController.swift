@@ -13,13 +13,12 @@ import UIKit
 class FibonacciTableViewController: UITableViewController {
 
   // MARK : - Property 
-
+  fileprivate var numberOfCell = 100
   private let indicator: UIActivityIndicatorView = {
     let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     return indicator
   }()
   fileprivate var fibonacciList = FibonacciList()
-
   // MARK : - View Life Cycle 
 
   override func viewDidLoad() {
@@ -53,18 +52,14 @@ class FibonacciTableViewController: UITableViewController {
   // MARK : - Request Fibonacci Calculation
 
   private func requestCalcFibonacci() {
-    displayActivityIndicator()
-    fibonacciList.getFibonacciNumbers {  [weak self] in
-      self?.updateUI()
-    }
-    
+    //displayActivityIndicator()
   }
 
   // MARK : - Update UI
 
-  private func updateUI() {
-    removeActivityIndicator()
-    UIApplication.shared.endIgnoringInteractionEvents()
+  fileprivate func updateUI() {
+    //removeActivityIndicator()
+    //UIApplication.shared.endIgnoringInteractionEvents()
     tableView.reloadData()
   }
 
@@ -77,24 +72,31 @@ extension FibonacciTableViewController {
   // MARK: - Table view data source
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return fibonacciList.numbersDict.count
+    return numberOfCell
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: Constant.CellIDs.FibonacciCell, for: indexPath)
-    configureCell(cell: cell, indexPath: indexPath)
+    cell.textLabel?.text = ""
+    let number = indexPath.row
+    DispatchQueue.global(qos:.background).async { [weak self] in
+      guard let value = self?.fibonacciList.fibonacciWithMemoization(number: number) else {
+        return
+      }
+      DispatchQueue.main.async {
+        guard let updateCell = tableView.cellForRow(at: indexPath) else {
+          return
+        }
+        if value.compare(NSNumber(value: Int64.max)).rawValue == 1 {
+          return
+        }
+        self?.setLabelTextInCell(cell: updateCell, indexPath: indexPath, value:value)
+      }
+    }
     return cell
   }
-
-  // MARK : - Configure FibonacciTableViewCell
-
-  private func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
-    
-    guard let fibonacciNumber = fibonacciList.numbersDict[indexPath.row] else {
-      return
-    }
-    
-    cell.textLabel?.text = Constant.FibonacciInfoPrefix + " \(indexPath.row) : \(fibonacciNumber.intValue)"
+  // MARK : - Set Text in FibonacciTableViewCell
+  private func setLabelTextInCell(cell: UITableViewCell, indexPath: IndexPath, value: NSDecimalNumber) {
+    cell.textLabel?.text = Constant.FibonacciInfoPrefix + " \(indexPath.row) : \(value)"
   }
-
 }
