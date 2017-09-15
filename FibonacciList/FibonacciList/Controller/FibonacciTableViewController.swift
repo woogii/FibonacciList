@@ -57,7 +57,6 @@ class FibonacciTableViewController: UITableViewController {
     fibonacciList.getFibonacciNumbers {  [weak self] in
       self?.updateUI()
     }
-    
   }
 
   // MARK : - Update UI
@@ -89,11 +88,9 @@ extension FibonacciTableViewController {
   // MARK : - Configure FibonacciTableViewCell
 
   private func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
-    
     guard let fibonacciNumber = fibonacciList.numbersDict[indexPath.row] else {
       return
     }
-    
     cell.textLabel?.text = Constant.FibonacciInfoPrefix + " \(indexPath.row) : \(fibonacciNumber.intValue)"
   }
 
