@@ -48,7 +48,7 @@ extension FibonacciTableViewController {
         guard let updateCell = tableView.cellForRow(at: indexPath) else {
           return
         }
-        if value.compare(NSNumber(value: Int64.max)).rawValue == 1 {
+        guard value.compare(NSNumber(value: Int64.max)) == .orderedAscending else {
           return
         }
         self?.setLabelTextInCell(cell: updateCell, indexPath: indexPath, value:value)

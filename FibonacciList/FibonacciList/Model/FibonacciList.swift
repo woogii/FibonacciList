@@ -39,13 +39,7 @@ class FibonacciList {
         // Calculate Fibonacci number
         fibonacciValue = fibonacciWithMemoization(number:number-1).adding(fibonacciWithMemoization(number: number-2))
 
-        // Get the value of int64 type from the fibonacci calculation result
-        if fibonacciValue.int64Value > 0 {
-          numbersDict[number] = fibonacciValue
-        } else {
-          // If it is a negative value, it means that there was an overflow and we do not save the result 
-          return NSDecimalNumber(decimal: fibonacciValue.decimalValue)
-        }
+        numbersDict[number] = fibonacciValue
       } else {
         // Use the existing fibonacci number
         fibonacciValue = numbersDict[number]
