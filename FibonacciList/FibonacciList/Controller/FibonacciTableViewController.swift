@@ -23,46 +23,7 @@ class FibonacciTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    configureActivityIndicator()
-    requestCalcFibonacci()
   }
-
-  // MARK : - Configure ActivityIndicator 
-
-  private func configureActivityIndicator() {
-    self.view.addSubview(indicator)
-    indicator.center = self.view.center
-  }
-
-  // MARK : - Remove ActivityIndicator
-
-  private func removeActivityIndicator() {
-    indicator.stopAnimating()
-    indicator.removeFromSuperview()
-  }
-
-  // MARK : - Display ActivityIndicator
-
-  private func displayActivityIndicator() {
-    indicator.startAnimating()
-    UIApplication.shared.beginIgnoringInteractionEvents()
-  }
-
-  // MARK : - Request Fibonacci Calculation
-
-  private func requestCalcFibonacci() {
-    //displayActivityIndicator()
-  }
-
-  // MARK : - Update UI
-
-  fileprivate func updateUI() {
-    //removeActivityIndicator()
-    //UIApplication.shared.endIgnoringInteractionEvents()
-    tableView.reloadData()
-  }
-
 }
 
 // MARK: - FibonacciTableViewController 
