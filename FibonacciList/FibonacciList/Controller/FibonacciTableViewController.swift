@@ -40,20 +40,11 @@ extension FibonacciTableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: Constant.CellIDs.FibonacciCell, for: indexPath)
     cell.textLabel?.text = ""
     let number = indexPath.row
-    DispatchQueue.global(qos:.background).async { [weak self] in
-      guard let value = self?.fibonacciList.fibonacciWithMemoization(number: number) else {
-        return
-      }
-      DispatchQueue.main.async {
-        guard let updateCell = tableView.cellForRow(at: indexPath) else {
-          return
-        }
-        guard value.compare(NSNumber(value: Int64.max)) == .orderedAscending else {
-          return
-        }
-        self?.setLabelTextInCell(cell: updateCell, indexPath: indexPath, value:value)
-      }
+    let value = fibonacciList.fibonacciWithMemoization(number: number)
+    guard value.compare(NSNumber(value: Int64.max)) == .orderedAscending else {
+      return UITableViewCell()
     }
+    setLabelTextInCell(cell: cell, indexPath: indexPath, value:value)
     return cell
   }
   // MARK : - Set Text in FibonacciTableViewCell
