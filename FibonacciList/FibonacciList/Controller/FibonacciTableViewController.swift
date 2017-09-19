@@ -7,8 +7,17 @@
 //
 
 import UIKit
-
-// MARK : - FibonacciTableViewController: UITableViewController 
+func memoize<T: Hashable, U>(work: @escaping ((T) -> U, T) -> U) -> (T) -> U {
+  var memo = Dictionary<T, U>()
+  func wrap(key: T) -> U {
+    if let q = memo[key] { return q }
+    let r = work(wrap, key)
+    memo[key] = r
+    return r
+  }
+  return wrap
+}
+// MARK : - FibonacciTableViewController: UITableViewController
 
 class FibonacciTableViewController: UITableViewController {
 
@@ -19,7 +28,10 @@ class FibonacciTableViewController: UITableViewController {
     return indicator
   }()
   fileprivate var fibonacciList = FibonacciList()
-  // MARK : - View Life Cycle 
+  fileprivate let fibonacci: ((Int) -> NSDecimalNumber) = memoize { (fibonacci: ((Int) -> NSDecimalNumber), n: Int) in
+    return (n < 2) ? NSDecimalNumber.init(value: n) : fibonacci(n - 1).adding(fibonacci(n - 2))
+  }
+  // MARK : - View Life Cycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -40,7 +52,8 @@ extension FibonacciTableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: Constant.CellIDs.FibonacciCell, for: indexPath)
     cell.textLabel?.text = ""
     let number = indexPath.row
-    let value = fibonacciList.fibonacciWithMemoization(number: number)
+    
+    let value = fibonacci(number)
     guard value.compare(NSNumber(value: Int64.max)) == .orderedAscending else {
       return UITableViewCell()
     }

@@ -11,8 +11,7 @@ import Foundation
 // MARK : - FibonacciList 
 
 class FibonacciList {
-
-  // MARK : - Property 
+  // MARK : - Property
 
   var numbersDict = [Int: NSDecimalNumber]()
 
